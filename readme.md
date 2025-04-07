@@ -2,10 +2,6 @@
 
 Hi everyone! I'm looking forward to working with all of you!
 
-### The Curriculum
-
-
-
 ### How you are evaluated
 
 * Projects
@@ -17,26 +13,26 @@ Hi everyone! I'm looking forward to working with all of you!
 
 ### Projects
 
-
+- 4/18
+- ???
+- 5/16
 
 ### Trainer Evaluations
 
-
+Mix of loom prompts and live mock interviews. 
 
 ### QC
 
 At scheduled intervals, other Revature trainers or employees may come in to ask interview questions and gauge technical skills and soft skills. 
 
-- 1/7 = Salesforce Admin with Web Dev
-- 1/28 = Salesforce Developer Core
-- 2/4 = Salesforce Lightning Developer
+- 
 
 Possible ratings:
 Red, Yellow, Lime, Green, Blue Star
 
 ### Quizzes
 
-A mix of multiple choice and short answer questions. We take our quizzes on RevPro. We will have multiple quizzes most weeks. 
+A mix of multiple choice and short answer questions. We take our quizzes on RevPro. 
 
 ### Camera Policy
 
