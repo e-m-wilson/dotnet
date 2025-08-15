@@ -13,9 +13,9 @@ Hi everyone! I'm looking forward to working with all of you!
 
 ### Projects
 
-- 4/18
-- ???
-- 5/16
+- 4/18 - Project 1
+- 5/2 - Project 2
+- 5/16 - Project 3
 
 ### Trainer Evaluations
 
@@ -25,7 +25,10 @@ Mix of loom prompts and live mock interviews.
 
 At scheduled intervals, other Revature trainers or employees may come in to ask interview questions and gauge technical skills and soft skills. 
 
-- 
+- C#/SQL: 4/17
+- ASP.NET REST API: 4/30
+- Web Development w/React: 5/8
+- DevOps GHA + AI 5/16
 
 Possible ratings:
 Red, Yellow, Lime, Green, Blue Star
@@ -61,4 +64,6 @@ Your trainer tracks attendance daily. Some things to note:
 Just DM me on Teams unless I specifically ask for an email.
 
 My email is: ethan.wilson@revature.com
+
+Jonathan's email is: jonathan.delacruz@revature.com
 (Note that all corporate employee emails end in ".com" not ".net")

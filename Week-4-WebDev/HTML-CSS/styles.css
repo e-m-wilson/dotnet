@@ -1,0 +1,15 @@
+div > p  {
+    color:darkgoldenrod
+}
+
+.common > p {
+    color: coral;
+}
+
+#third-item {
+    color:darkorchid
+}
+
+h3 + p {
+    color: darkslateblue
+}

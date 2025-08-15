@@ -1,0 +1,15 @@
+Multiple currencies can be disabled at a later time. {F}
+
+What standard field is added to each object when multiple currencies is enabled? {
+    ~ Currency
+    ~ CurrencyType
+    = CurrencyIsoCode
+    ~ CurrencyName
+}
+
+Which object do dated exchange rates apply to records of? {
+    ~ Lead
+    ~ Account
+    ~ Product
+    = Opportunity
+}

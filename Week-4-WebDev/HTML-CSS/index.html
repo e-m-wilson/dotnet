@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS Demo</title>
+    <style>
+        li {
+            color: blue;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+
+</header>
+<body>
+    <!-- This is a comment -->
+    <!--
+        This is a comment
+        It can span multiple lines
+        Anything inside of this comment
+        is ignored for rendering AND for the DOM
+    -->
+    <p>
+        This is my first paragraph
+    </p>
+    <p style="color: darkred;">
+        Everything inside my p tags
+        that is enclosed by the opening and closing tag
+        belongs to this p element
+        <b>This bold text is technically an inline element</b>
+        Notice no /n character is used.
+    </p>
+
+    <h2 class="common">Common tags</h2>
+
+    <ul class="common">
+        <li>h1</li>
+        <li>h2</li>
+        <li id="third-item">h3</li>
+        <li>h4</li>
+        <li>h5</li>
+        <li>h6</li>
+    </ul>
+
+    <ol>
+        <li><img src="" alt=""></li>
+    </ol>
+
+    <h3>Adjacent sibling</h3>
+    <p>Im adjacent to the h3 above</p>
+
+    <div>
+        <p>I can stick elements inside of a div</p>
+        <p>Essentially to logically group them.</p>
+    </div>
+
+    <a href="https://www.google.com">Google</a>
+
+    <!-- INPUTS -->
+     <input type="file" name="DemoFile" id="">
+
+
+     <h2>Form Example</h2>
+     <form action="wwww.myapi.com/products" method="get">
+     <!-- Generally within a form I want to have labels and inputs-->
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="" required>
+      <label for="email"> Email:</label>
+      <input type="email" name="email" id="" required>
+      <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <label for="pattern">Three Leter Code:</label>
+        <input type="text" name="pattern" pattern="[A-Za-z]{3}" required>
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+            <option value="us">USA</option>
+            <option value="ca">Canada</option>
+        </select>
+
+        <!-- Multi select-->
+         <label for="colors">Colors (Multi-Select)</label>
+         <select name="colors" id="colors" multiple>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+<footer>
+
+</footer>
+</html>
