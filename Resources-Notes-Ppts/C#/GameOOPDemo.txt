@@ -1,0 +1,132 @@
+Notes: 
+Each step in the demo 
+
+interface IMovable
+{
+    void Move();
+}
+
+interface IAttackable
+{
+    void Attack();
+}
+
+class Warrior : IMovable, IAttackable
+{
+    public void Move()
+    {
+        Console.WriteLine("Warrior moves forward");
+    }
+
+    public void Attack()
+    {
+        Console.WriteLine("Warrior swings sword");
+    }
+}
+
+class Archer : IMovable, IAttackable
+{
+    public void Move()
+    {
+        Console.WriteLine("Archer moves swiftly");
+    }
+
+    public void Attack()
+    {
+        Console.WriteLine("Archer shoots arrow");
+    }
+}
+
+Demo up to this point:
+IMovable character = new Warrior();
+character.Move();
+
+character = new Archer();
+character.Move();
+
+THIS IS BAD. LET'S SEE WHY:
+interface ICharacter
+{
+    void Move();
+    void Attack();
+    void CastSpell();
+}
+
+class Warrior : ICharacter
+{
+    public void Move() { }
+    public void Attack() { }
+
+    public void CastSpell()
+    {
+        throw new NotImplementedException(); // bad smell
+    }
+}
+
+DO THIS INSTEAD, CLIENTS SHOULDN'T DEPEND ON METHODS THEY DON'T USE:
+interface ICastable
+{
+    void CastSpell();
+}
+
+class Mage : IMovable, IAttackable, ICastable
+{
+    public void Move() => Console.WriteLine("Mage teleports");
+    public void Attack() => Console.WriteLine("Mage uses staff");
+    public void CastSpell() => Console.WriteLine("Mage casts fireball");
+}
+
+DEPENDENCY INJECTION
+LET'S CREATE A SERVICE:
+interface IAttackService
+{
+    void PerformAttack(string characterType);
+}
+
+CONCRETION
+class AttackService : IAttackService
+{
+    public void PerformAttack(string characterType)
+    {
+        Console.WriteLine($"{characterType} performs attack logic");
+    }
+}
+
+INJECT INTO CLASS 
+class Warrior : IMovable, IAttackable
+{
+    private readonly IAttackService _attackService;
+
+    public Warrior(IAttackService attackService)
+    {
+        _attackService = attackService;
+    }
+
+    public void Move()
+    {
+        Console.WriteLine("Warrior moves forward");
+    }
+
+    public void Attack()
+    {
+        _attackService.PerformAttack("Warrior");
+    }
+}
+
+THEN IN MAIN.CS :
+class Program
+{
+    static void Main()
+    {
+        IAttackService attackService = new AttackService();
+
+        Warrior character = new Warrior(attackService);
+        character.Move();
+        character.Attack();
+
+        
+    }
+}
+
+DEPENDENCY INJECTION = HOW THE DEPENDENCY GETS INTO THE CLASS 
+DEPENDENCY INVERSION = WHAT THE CLASS DEPENDS ON (INTERFACES VS CONCRETE)
